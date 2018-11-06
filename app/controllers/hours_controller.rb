@@ -1,7 +1,7 @@
 class HoursController < ApplicationController
   def index
     create_and_keep_ten
-    @hrs = Hour.all
+    @hours = Hour.all.reverse
   end
 
   def create_and_keep_ten

@@ -1,12 +1,7 @@
 <h1>What time is it?</h1>
-<% if @hrs.any? %>
-  <p class='main_hour'><%= @hrs.last.hour %></p>
-  <p>Last hours:</p>
+  <p class='main_hour'><%= @hours.any? ? @hours.first.hour : '(empty)' %></p>
+
+  <h2>Last hours:</h2>
   <ol>
-    <% @hrs.reverse_each do |hr| %>
-      <li><%= hr.hour %></li>
-    <% end %>
+    <%= render @hours %>
   </ol>
-<% else %>
-  <p>No hours here.</p>
-<% end %>
