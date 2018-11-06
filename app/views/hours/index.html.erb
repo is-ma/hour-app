@@ -1,5 +1,5 @@
 <h1>What time is it?</h1>
-  <p class='main_hour'><%= @hours.any? ? @hours.first.hour : '(empty)' %></p>
+  <p class='main_hour'><%= @hours.any? ? @hours.first.only_hour : '(empty)' %></p>
 
   <h2>Last hours:</h2>
   <ol>

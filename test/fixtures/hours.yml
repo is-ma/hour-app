@@ -1,7 +1,4 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  hour: MyString
-
-two:
-  hour: MyString
+  hour: "2018-11-06 16:30:59 -0600"
