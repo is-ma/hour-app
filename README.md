@@ -1,24 +1,10 @@
-# README
+# Rails Hour App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Smallest Rails app that gives you the hour in Mexico City. It uses PostgreSQL and it's useful as a small boilerplate app to test a production environment (staging/production); since the hour is dynamic, this is particularly useful to test catching configurations (Varnish Cache, etc.).
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Clone the repo
+* ```cp config/database.copy.yml config/database.yml  # and customize it```
+* generate new credentials or upload your ```config/master.key```
+* Test it on your environment
