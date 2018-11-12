@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: hour_app_development
+
+test:
+  <<: *default
+  database: hour_app_test
+
+staging:
+  url: postgres://deploy@localhost/hour_app_staging_db
+production:
+  url: postgres://deploy@localhost/hour_app_production_db
