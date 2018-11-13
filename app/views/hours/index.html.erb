@@ -1,7 +1,14 @@
 <h1>What time is it?</h1>
-  <p class='main_hour'><%= @hours.any? ? @hours.first.only_hour : '(empty)' %></p>
+  <p class='main_hour'>
+    <%= @hours.any? ? @hours.first.only_hour : '(empty)' %>
+  </p>
+  <p class='semibutton'>
+    <span>[</span>
+    <%= link_to 'reload', root_path %>
+    <span>]</span>
+  </p>
 
-  <h2>Last hours:</h2>
+  <h2>Last 10 hours:</h2>
   <ol>
     <%= render @hours %>
   </ol>
